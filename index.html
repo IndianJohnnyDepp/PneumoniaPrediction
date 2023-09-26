@@ -19,32 +19,15 @@
                         <p> Upload a gray-scale chest x-ray in ".jpeg" format <br> to predict 
                             whether or not the x-ray shows Pneumonia </p>
                         
-                        <form class = "choose-file">
+                        <form class = "choose-file" method = "POST">
 
                             <input type="file" id="inputxray" accept="image/jpeg">
                                 
                         </form>
                         
-                        <script>
-                            function showpred() {
-                                let predresponse = fetch("https://bwlwkhjj28.execute-api.ap-south-1.amazonaws.com/Production/predict-pneumonia", 
-                                                            { mode: 'no-cors'});
-                                predresponse.then(res => res.text())
-                                            .then(d => console.log(d))
-                                            .catch(error => {
-                                                                if (error instanceof TypeError && error.message.includes('API key')) 
-                                                                {
-                                                                    console.error('Invalid API key:', error);
-                                                                } 
-                                                                else 
-                                                                {
-                                                                    console.error('There was a problem with the Fetch operation:', error);
-                                                                }
-                                                            });
-                            }
-                        </script>                    
+                        <script src="predict.js" id="runscript"></script>                    
                         
-                        <button class = "predictbutton" onclick="showpred()"> Predict! >> </button> 
+                        <button class = "predictbutton" onclick="runscript" type = "submit"> Predict! >> </button> 
                         
                         <p id = "result">                        
                         </p>                      
