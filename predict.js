@@ -1,27 +1,13 @@
-const input = document.getElementById("selectAvatar");
-const avatar = document.getElementById("avatar");
-const textArea = document.getElementById("textArea");
-
-const convertBase64 = (file) => {
-  return new Promise((resolve, reject) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(file);
-
-    fileReader.onload = () => {
-      resolve(fileReader.result);
-    };
-
-    fileReader.onerror = (error) => {
-      reject(error);
-    };
+const $file = document.querySelector(".local");
+$file.addEventListener("change", (event) => {
+    const selectedfile = event.target.files;
+    if (selectedfile.length > 0) {
+      const [imageFile] = selectedfile;
+      const fileReader = new FileReader();
+      fileReader.onload = () => {
+        const srcData = fileReader.result;
+        console.log('base64:', srcData)
+      };
+      fileReader.readAsDataURL(imageFile);
+    }
   });
-};
-
-const uploadImage = async (event) => {
-  const file = event.target.files[0];
-  const base64 = await convertBase64(file);
-  avatar.src = base64;
-  textArea.innerText = base64;
-};
-
-);
