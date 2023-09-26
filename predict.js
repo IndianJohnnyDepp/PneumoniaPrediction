@@ -6,7 +6,7 @@ $file.addEventListener("change", (event) => {
       const fileReader = new FileReader();
       fileReader.onload = () => {
         const srcData = fileReader.result;
-        console.log('base64:', srcData)
+        // console.log('base64:', srcData)
       };
       fileReader.readAsDataURL(imageFile);
     }
