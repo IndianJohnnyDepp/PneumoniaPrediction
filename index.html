@@ -27,7 +27,8 @@
                         
                         <script>
                             function showpred() {
-                                let predresponse = fetch("https://bwlwkhjj28.execute-api.ap-south-1.amazonaws.com/Production/predict-pneumonia");
+                                let predresponse = fetch("https://bwlwkhjj28.execute-api.ap-south-1.amazonaws.com/Production/predict-pneumonia", 
+                                                            { mode: 'no-cors'});
                                 predresponse.then(res => res.text())
                                             .then(d => console.log(d))
                                             .catch(error => {
