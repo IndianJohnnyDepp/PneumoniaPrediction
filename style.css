@@ -11,15 +11,10 @@
 }
 
 .img {
-    max-height: 70px;
-    max-width: 50px;
+    max-height: 100px;
+    max-width: 100px;
   }
-  
-  .input-div {
-    margin: 16px;
-    padding: 16px;
-  }
-  
+
 .menu ul{
     display: inline-flex;
     margin: 50px;
