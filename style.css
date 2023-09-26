@@ -22,12 +22,6 @@
     cursor: pointer;
 }
 
-.logo img{
-    width: 80px;
-    margin-top: -7px;
-    margin-right: 10px;
-}
-
 .active{
     color: #0055ff !important;
 }
