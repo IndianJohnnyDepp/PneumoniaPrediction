@@ -10,11 +10,6 @@
     background: #ffffff;
 }
 
-.img {
-    max-height: 100px;
-    max-width: 100px;
-  }
-
 .menu ul{
     display: inline-flex;
     margin: 50px;
