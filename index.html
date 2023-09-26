@@ -24,6 +24,16 @@
                             <input type="file" id="selectAvatar" accept="image/jpeg">
                                 
                         </form>
+                        <div class="row">
+                                <div class="col">
+                                      <h6>Image Preview:</h6>
+                                      <img class="img" id="avatar" />
+                        </div>
+                        <div class="col">
+                                <h6>Base64 Output</h6>
+                                <textarea id="textArea" rows="30" cols="50"></textarea>
+                        </div>
+                    </div>
                         
                     
                         
@@ -37,16 +47,7 @@
                     <div class = "app-picture">
                         <img src = "images/websiteimage.jpg">
                     </div>
-                            <div class="row">
-                                <div class="col">
-                                      <h6>Image Preview:</h6>
-                                      <img class="img" id="avatar" />
-                            </div>
-                            <div class="col">
-                                <h6>Base64 Output</h6>
-                                <textarea id="textArea" rows="30" cols="50"></textarea>
-                            </div>
-                    </div>
+
 
             </div>
             <div class="row">
@@ -62,6 +63,4 @@
         </div>
         <script src="./predict.js"></script>
     </body>
-
-
 </html>
