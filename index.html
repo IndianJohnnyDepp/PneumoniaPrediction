@@ -25,9 +25,29 @@
                             <input type="file" id="inputxray" accept="image/jpeg">
                                 
                         </form>
-                                             
-                         <button class = "predictbutton"> Predict! >> </button> 
-                                                
+                        
+                        <script>
+                            function showpred() {
+                                let predresponse = fetch("https://bwlwkhjj28.execute-api.ap-south-1.amazonaws.com/Production/predict-pneumonia");
+                                predresponse.then(res => res.text())
+                                            .then(d => console.log(d))
+                                            .catch(error => {
+                                                                if (error instanceof TypeError && error.message.includes('API key')) 
+                                                                {
+                                                                    console.error('Invalid API key:', error);
+                                                                } 
+                                                                else 
+                                                                {
+                                                                    console.error('There was a problem with the Fetch operation:', error);
+                                                                }
+                                                            });
+                            }
+                        </script>                    
+                        
+                        <button class = "predictbutton" onclick="showpred()"> Predict! >> </button> 
+                        
+                        <p id = "result">                        
+                        </p>                      
                         
                     </div>
                     <div class = "app-picture">
