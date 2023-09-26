@@ -19,25 +19,38 @@
                         <p> Upload a gray-scale chest x-ray in ".jpeg" format <br> to predict 
                             whether or not the x-ray shows Pneumonia </p>
                         
-                        <form class = "choose-file" method = "POST">
+                        <form class = "choose-file">
 
-                            <input type="file" id="inputxray" accept="image/jpeg">
+                            <input type="file" id="selectAvatar" accept="image/jpeg">
                                 
                         </form>
                         
-                        <script src="predict.js" id="runscript"></script>                    
+                    
                         
-                        <button class = "predictbutton" onclick="runscript" type = "submit"> Predict! >> </button> 
-                        
-                        <p id = "result">                        
-                        </p>                      
+                       <!-- <button class = "predictbutton" type = "button"> Predict! >> </button> 
+                        -->
+                                         
                         
                     </div>
+
+                    
                     <div class = "app-picture">
                         <img src = "images/websiteimage.jpg">
                     </div>
+
             </div>
+            <div class="row">
+                <div class="col">
+                  <h6>Image Preview:</h6>
+                  <img class="img" id="avatar" />
+                </div>
+                <div class="col">
+                  <h6>Base64 Output</h6>
+                  <textarea id="textArea" rows="30" cols="50"></textarea>
+                </div>
+              </div>
         </div>
+        <script src="./predict.js"></script>
     </body>
 
 

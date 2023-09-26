@@ -10,6 +10,16 @@
     background: #ffffff;
 }
 
+.img {
+    max-height: 700px;
+    max-width: 500px;
+  }
+  
+  .input-div {
+    margin: 16px;
+    padding: 16px;
+  }
+  
 .menu ul{
     display: inline-flex;
     margin: 50px;
