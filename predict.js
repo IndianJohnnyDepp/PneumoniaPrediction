@@ -24,6 +24,4 @@ const uploadImage = async (event) => {
   textArea.innerText = base64;
 };
 
-input.addEventListener("change", (e) => {
-  uploadImage(e);
-});
+);
