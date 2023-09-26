@@ -25,7 +25,7 @@ const requestToAWS=axios({
   });
 
   const respFromAWS = await requestToAWS;
-  return res.json({ message: respFromAWS});
+ // return res.json({ message: respFromAWS});
 
    } catch (err) {
   console.log(err)}
