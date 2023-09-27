@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title> Pnuemonia Prediction using Machine Learning </title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+
+    <body>
+        <div class = "container">
+            <div class = "menu">
+                <ul>
+                    <li class = "active"> Home - Pneumonia Detection </li>
+                    <li> Contact Aravind </li>
+                </ul>
+            </div>
+            <div class = "banner">
+                    <div class = "app-text">
+                        <h1> PWSkills Internship Project </h1>
+                        <h3> by Aravind Sridharan </h3>
+                        <p> Upload a gray-scale chest x-ray in ".jpeg" format <br> to predict 
+                            whether or not the x-ray shows Pneumonia </p>
+                        
+                        <form class = "choose-file">
+
+                            <input type="file" id="selectAvatar" accept="image/jpeg">
+                                
+                        </form>
+                        
+                    
+                        
+                       <!-- <button class = "predictbutton" type = "button"> Predict! >> </button> 
+                        -->
+                                         
+                        
+                    </div>
+
+                    
+                    <div class = "app-picture">
+                        <img src = "images/websiteimage.jpg">
+                    </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                  <h6>Image Preview:</h6>
+                  <img class="img" id="avatar" />
+                </div>
+                <div class="col">
+                  <h6>Base64 Output</h6>
+                  <textarea id="textArea" rows="30" cols="50"></textarea>
+                </div>
+              </div>
+        </div>
+        <script src="./predict.js"></script>
+    </body>
+
+
+</html>
